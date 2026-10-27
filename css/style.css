@@ -143,8 +143,8 @@ main {
 
 .avatar-img,
 .avatar-placeholder {
-  width: 148px;
-  height: 148px;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
 }
 .avatar-img { object-fit: cover; display: block; }
@@ -165,10 +165,23 @@ main {
 
 .social-links {
   display: flex;
-  gap: 1rem;
+  gap: 1.1rem;
   flex-wrap: wrap;
   font-size: 0.92rem;
   font-weight: 500;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-muted);
+}
+.social-link:hover { color: var(--accent); text-decoration: none; }
+.social-icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
 }
 
 /* Sections */
@@ -242,38 +255,6 @@ main {
   font-weight: 600;
 }
 
-/* Projects */
-.project-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-.project-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1.25rem 1.4rem;
-}
-.project-card h3 { margin-bottom: 0.5rem; }
-.project-card p { font-size: 0.92rem; color: var(--text-muted); }
-.project-link { font-size: 0.88rem; font-weight: 600; }
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0.6rem 0 0.8rem;
-}
-.tags span {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.18rem 0.6rem;
-}
-
 /* Honors & Awards / News & Announcements */
 .awards-list,
 .news-list {
@@ -283,20 +264,27 @@ main {
 }
 .awards-list li,
 .news-list li {
+  display: flex;
+  gap: 1rem;
   font-size: 0.95rem;
   padding: 0.6rem 0;
   border-bottom: 1px dashed var(--border);
 }
 .awards-list li:last-child,
 .news-list li:last-child { border-bottom: none; }
+
 .award-date,
 .news-date {
+  flex: 0 0 7.5rem;
   color: var(--text-muted);
   font-size: 0.85rem;
-  margin-right: 0.5rem;
   white-space: nowrap;
 }
-.award-date { margin-left: 0.35rem; margin-right: 0; }
+.award-text,
+.news-text {
+  flex: 1;
+  min-width: 0;
+}
 
 .contact-section { text-align: left; }
 
@@ -314,4 +302,8 @@ main {
   .hero-text .social-links { justify-content: center; }
   .entry-header { flex-direction: column; gap: 0.15rem; }
   .nav-wrap { flex-direction: column; align-items: flex-start; }
+  .awards-list li,
+  .news-list li { flex-direction: column; gap: 0.2rem; }
+  .award-date,
+  .news-date { flex-basis: auto; }
 }
