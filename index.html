@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Risshab Srinivas Ramesh</title>
+<meta name="description" content="Risshab Srinivas Ramesh — Learning-based combinatorial optimization, reinforcement learning, chaos-theoretic search methods, and explainable ML.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<button id="theme-toggle" aria-label="Toggle dark mode">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+</button>
+
+<header class="site-header">
+  <nav class="nav-wrap">
+    <a class="nav-name" href="#top">Risshab Srinivas Ramesh</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section id="about" class="hero">
+    <div class="hero-photo">
+      <!-- TODO: replace with a real headshot, e.g. assets/img/profile.jpg -->
+      <svg viewBox="0 0 160 160" class="avatar-placeholder" role="img" aria-label="Profile photo placeholder">
+        <circle cx="80" cy="80" r="80" />
+        <text x="80" y="96" text-anchor="middle">RSR</text>
+      </svg>
+    </div>
+    <div class="hero-text">
+      <h1>Risshab Srinivas Ramesh</h1>
+      <p class="tagline">Learning-based combinatorial optimization · Reinforcement learning under constraints · Chaos-theoretic methods for search · Explainability in safety-critical ML</p>
+      <p class="bio">
+        I'm an undergraduate researcher pursuing a dual degree in Computer Science Engineering at
+        <strong>Ramaiah Institute of Technology</strong> and Programming &amp; Data Science at
+        <strong>IIT Madras</strong>. I'm currently a Research Intern at the
+        Robert Bosch Centre for Cyber Physical Systems, IISc, advised by Dr. Prasant Misra and
+        Dr. Nithin Nagaraj, where I work on reinforcement learning for constrained routing problems
+        and chaos-inspired methods for combinatorial search. I'm broadly interested in building
+        optimization and decision-making systems that are fast, data-efficient, and explainable
+        enough to trust in safety-critical deployments.
+      </p>
+      <div class="social-links">
+        <a href="mailto:risshabsrinivas@gmail.com" aria-label="Email">Email</a>
+        <!-- TODO: replace # with real profile URLs -->
+        <a href="#" aria-label="Google Scholar">Scholar</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <!-- TODO: add a resume PDF to assets/ and point this at it -->
+        <a href="#cv" aria-label="Resume / CV">CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" class="section">
+    <h2>Research Experience</h2>
+
+    <article class="entry">
+      <div class="entry-header">
+        <h3>Research Intern</h3>
+        <span class="entry-date">Mar 2025 – Present</span>
+      </div>
+      <p class="entry-org">Robert Bosch Centre for Cyber Physical Systems, IISc — advised by Dr. Prasant Misra and Dr. Nithin Nagaraj</p>
+      <ul>
+        <li>Formulated the Electric Vehicle Routing Problem (EVRP) with time windows and energy constraints as a Markov Decision Process, and trained a Deep Q-Network (DQN) agent to produce near-optimal routes.</li>
+        <li>Integrated NeuroChaos Learning (NCL) as a chaotic feature map preceding the DQN policy network — NCL's ergodic exploration properties reduce the effective search horizon on large instances, yielding faster convergence than standard ε-greedy exploration.</li>
+      </ul>
+    </article>
+
+    <article class="entry">
+      <div class="entry-header">
+        <h3>Project Intern</h3>
+        <span class="entry-date">2024</span>
+      </div>
+      <p class="entry-org">Hewlett Packard Enterprise (HPE)</p>
+      <ul>
+        <li>Designed and deployed a multi-agent log analysis system using LangGraph. An orchestrator agent dynamically routes log events to a specialised anomaly detection agent (embedding-based clustering over a VectorDB) and a root-cause analysis agent (retrieval-augmented chain-of-thought reasoning), replacing manual triage.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section id="publications" class="section">
+    <h2>Publications</h2>
+
+    <article class="pub">
+      <span class="pub-venue">Current Research</span>
+      <h3 class="pub-title">Chaos-Inspired Ergodic Encoding for Combinatorial Optimization</h3>
+      <p class="pub-authors"><strong>Risshab Srinivas Ramesh</strong>, Dr. Prasant Misra, Dr. Nithin Nagaraj</p>
+      <p class="pub-abstract">
+        Introduced Ergodic Solution Encoding (ESE): rather than learning instance-level decision
+        policies, ESE encodes the population-level distribution of optimal solutions as the
+        invariant measure of a Piecewise Linear Markov Map (PLM), fitted via the Inverse
+        Frobenius–Perron Problem. Solution generation uses Orbit Walk and Ergodic Beam Search,
+        exploiting deterministic chaotic dynamics to produce diverse, high-quality candidates
+        without stochastic sampling or instance-specific training. On 15 TSPLIB benchmarks
+        (N=10–500): matches MILP optimality at small scale; outperforms GA and
+        learning-to-optimize baselines at medium–large scale at orders-of-magnitude lower
+        inference latency.
+      </p>
+    </article>
+
+    <article class="pub">
+      <span class="pub-venue">COMSNETS 2026</span>
+      <h3 class="pub-title">Learning-Based Optimization of EV Routing with V2G Integration and On-the-Go Energy Harvesting</h3>
+      <p class="pub-authors"><strong>Risshab Srinivas Ramesh</strong>, Dr. Prasant Misra, Dr. Arjunan Pandaraswamy</p>
+      <p class="pub-abstract">
+        Formulated the EVRP as a reinforcement learning problem, jointly optimizing routing,
+        V2G energy sales, and on-route solar harvesting. Modelled time windows and energy
+        dynamics as MDP constraints. On the Solomon benchmark dataset, the learned agent runs
+        18.85× faster than a genetic algorithm baseline; the GA achieves at most 21.23% higher
+        solution accuracy, reflecting the practical speed-accuracy tradeoff at deployment scale.
+      </p>
+    </article>
+
+    <article class="pub">
+      <span class="pub-venue">BiSCUIT @ ECCV 2026</span>
+      <h3 class="pub-title">When Explanations Fail: Measuring Attribution Drift in Corrupted Medical Images and an Architecture to Resist It</h3>
+      <p class="pub-authors"><strong>Risshab Srinivas Ramesh</strong>, et al.</p>
+      <p class="pub-abstract">
+        Introduced energy-in-mask (EiM), a chance-calibrated attribution metric that formalises
+        a "sub-chance" test for saliency maps on segmentation models. Applied to CT lung nodules
+        (LIDC-IDRI, n=150): the proposed ARX-SE-UNet, which conditions an SE-UNet backbone on a
+        learned corruption embedding via FiLM-inspired blocks, is the only architecture whose
+        EiM exceeds chance (0.0170 vs. c̄=0.0122) and achieves 6.2× the EiM recovery of the best
+        baseline under CLAHE+BM3D preprocessing.
+      </p>
+    </article>
+
+    <article class="pub">
+      <span class="pub-venue">IEEE 2024</span>
+      <h3 class="pub-title">Optimizing Big Data Processing: Hadoop's Master-Slave Architecture and Serverless Alternatives</h3>
+      <p class="pub-authors"><strong>Risshab Srinivas Ramesh</strong>, Pradeep Kumar</p>
+      <p class="pub-abstract">
+        Analysed Hadoop's master-slave scheduling under skewed workloads and characterised
+        conditions under which serverless (FaaS) execution models offer superior cost-latency
+        tradeoffs for batch analytics pipelines.
+      </p>
+    </article>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+
+      <article class="project-card">
+        <h3>Smart MCQ Solver</h3>
+        <p>
+          Benchmarked recurrent sequence models (LSTM, GRU) against fine-tuned pre-trained
+          transformers (BERT, DeBERTa) on a domain-specific multiple-choice question dataset.
+          Evaluated using MAP@3; DeBERTa fine-tuning outperformed all baselines, establishing
+          the gap between in-context language modelling and task-specific recurrence for
+          multi-choice reasoning.
+        </p>
+        <div class="tags">
+          <span>Python</span><span>PyTorch</span><span>HuggingFace Transformers</span>
+        </div>
+        <!-- TODO: replace # with real repo URL -->
+        <a href="#" class="project-link">GitHub →</a>
+      </article>
+
+      <article class="project-card">
+        <h3>CNN for Dermatological Disease Detection</h3>
+        <p>
+          Designed and trained a custom CNN architecture for multi-class classification of skin
+          conditions from dermoscopy images. Systematic augmentation (rotation, colour jitter,
+          cutout) and stratified cross-validation were used to address class imbalance and
+          improve generalisation across under-represented skin types.
+        </p>
+        <div class="tags">
+          <span>Python</span><span>TensorFlow</span><span>Keras</span><span>OpenCV</span><span>Scikit-learn</span>
+        </div>
+        <a href="#" class="project-link">GitHub →</a>
+      </article>
+
+      <article class="project-card">
+        <h3>Automated Code Generation and Deployment Pipeline</h3>
+        <p>
+          Built a FastAPI service that converts natural-language specifications into complete,
+          deployable codebases. An automated CI/CD pipeline containerises the output, pushes to
+          GitHub, and deploys to GitHub Pages. Hosted on Hugging Face Spaces.
+        </p>
+        <div class="tags">
+          <span>Python</span><span>FastAPI</span><span>HuggingFace Transformers</span><span>Docker</span><span>Git</span>
+        </div>
+        <a href="#" class="project-link">GitHub →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="cv" class="section">
+    <h2>Education, Honors &amp; Skills</h2>
+
+    <div class="cv-grid">
+      <div>
+        <h3>Education</h3>
+        <article class="entry">
+          <div class="entry-header">
+            <h4>B.E., Computer Science and Engineering</h4>
+            <span class="entry-date">Sep 2023 – Present</span>
+          </div>
+          <p class="entry-org">Ramaiah Institute of Technology · CGPA 9.91/10</p>
+        </article>
+        <article class="entry">
+          <div class="entry-header">
+            <h4>B.Sc., Programming and Data Science</h4>
+            <span class="entry-date">Sep 2023 – Present</span>
+          </div>
+          <p class="entry-org">Indian Institute of Technology Madras · CGPA 8.8/10</p>
+        </article>
+
+        <h3>Honors &amp; Awards</h3>
+        <ul class="plain-list">
+          <li><strong>LRN Foundation Grant</strong> — Travel grant to attend ECCV 2026 <span class="entry-date">2026</span></li>
+          <li><strong>Best Blog Award</strong> — Society for Data Science Blogathon on Responsible AI <span class="entry-date">2024</span></li>
+          <li><strong>Smart India Hackathon</strong> — Winner, Tourism Category (national-level) <span class="entry-date">2022</span></li>
+          <li><strong>Karnataka Science and Technology Award</strong> — Finalist, among 100 statewide participants <span class="entry-date">2022</span></li>
+          <li><strong>Microsoft Learn Student Ambassador</strong> — selected to organise technical events and mentorship programmes</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Technical Skills</h3>
+        <div class="skill-group">
+          <h4>Frameworks &amp; Libraries</h4>
+          <div class="tags">
+            <span>PyTorch</span><span>TensorFlow</span><span>LangChain</span><span>LangGraph</span><span>HuggingFace Transformers</span><span>FastAPI</span><span>Flask</span><span>NumPy</span><span>Scikit-learn</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Languages</h4>
+          <div class="tags">
+            <span>Python</span><span>Java</span><span>C</span><span>SQL</span><span>JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Tools &amp; Infrastructure</h4>
+          <div class="tags">
+            <span>Docker</span><span>Git</span><span>Redis</span><span>Celery</span><span>FAISS</span><span>Chroma</span><span>Linux</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Databases</h4>
+          <div class="tags">
+            <span>MySQL</span><span>SQLite</span><span>MongoDB</span>
+          </div>
+        </div>
+
+        <h3>Certifications</h3>
+        <ul class="plain-list">
+          <li>Goethe-Zertifikat B1 (German, Goethe-Institut)</li>
+          <li>Google IT Automation with Python (Google)</li>
+          <li>Python for Everybody Specialization (U. Michigan)</li>
+          <li>C Programming with Linux (Dartmouth/IMT)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <h2>Contact</h2>
+    <p>Bangalore, India</p>
+    <div class="social-links">
+      <a href="mailto:risshabsrinivas@gmail.com">risshabsrinivas@gmail.com</a>
+      <a href="#">Google Scholar</a>
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Risshab Srinivas Ramesh.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
