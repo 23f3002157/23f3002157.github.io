@@ -24,8 +24,9 @@
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#publications">Publications</a></li>
+      <li><a href="#news">News</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#cv">CV</a></li>
+      <li><a href="#honors">Honors</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -49,17 +50,23 @@
       </p>
       <div class="social-links">
         <a href="mailto:risshabsrinivas@gmail.com" aria-label="Email">Email</a>
-        <!-- TODO: replace # with real profile URLs -->
-        <a href="#" aria-label="Google Scholar">Scholar</a>
+        <a href="https://scholar.google.com/citations?user=nJExFNUAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">Scholar</a>
+        <!-- TODO: replace # with real GitHub URL -->
         <a href="#" aria-label="GitHub">GitHub</a>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <!-- TODO: add a resume PDF to assets/ and point this at it -->
-        <a href="#cv" aria-label="Resume / CV">CV</a>
+        <a href="https://www.linkedin.com/in/risshab-srinivas-ramesh-7b614a290" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a href="assets/cv/CV.pdf" target="_blank" rel="noopener" aria-label="Resume / CV (PDF)">CV</a>
       </div>
     </div>
     <div class="hero-photo">
-      <!-- TODO: replace with a real headshot, e.g. assets/img/profile.jpg -->
-      <svg viewBox="0 0 160 160" class="avatar-placeholder" role="img" aria-label="Profile photo placeholder">
+      <!-- Drop your headshot in assets/img/profile.jpg and it will replace the placeholder automatically -->
+      <img
+        id="avatar-img"
+        class="avatar-img"
+        src="assets/img/profile.jpg"
+        alt="Risshab Srinivas Ramesh"
+        onerror="this.style.display='none'; document.getElementById('avatar-placeholder').style.display='block';"
+      >
+      <svg id="avatar-placeholder" viewBox="0 0 160 160" class="avatar-placeholder" style="display:none" role="img" aria-label="Profile photo placeholder">
         <circle cx="80" cy="80" r="80" />
         <text x="80" y="96" text-anchor="middle">RSR</text>
       </svg>
@@ -111,6 +118,8 @@
         learning-to-optimize baselines at medium–large scale at orders-of-magnitude lower
         inference latency.
       </p>
+      <!-- TODO: point at the real preprint/paper link once available -->
+      <a href="#" class="pub-link">Paper</a>
     </article>
 
     <article class="pub">
@@ -124,6 +133,7 @@
         18.85× faster than a genetic algorithm baseline; the GA achieves at most 21.23% higher
         solution accuracy, reflecting the practical speed-accuracy tradeoff at deployment scale.
       </p>
+      <a href="#" class="pub-link">Paper</a>
     </article>
 
     <article class="pub">
@@ -138,6 +148,7 @@
         EiM exceeds chance (0.0170 vs. c̄=0.0122) and achieves 6.2× the EiM recovery of the best
         baseline under CLAHE+BM3D preprocessing.
       </p>
+      <a href="#" class="pub-link">Paper</a>
     </article>
 
     <article class="pub">
@@ -149,7 +160,18 @@
         conditions under which serverless (FaaS) execution models offer superior cost-latency
         tradeoffs for batch analytics pipelines.
       </p>
+      <a href="#" class="pub-link">Paper</a>
     </article>
+  </section>
+
+  <section id="news" class="section">
+    <h2>News and Announcements</h2>
+    <ul class="news-list">
+      <li><span class="news-date">[8 Sep 2026]</span> Presented paper at ECCV 2026, Malmö, Sweden 🇸🇪</li>
+      <li><span class="news-date">[29 Jul 2026]</span> Paper accepted at the BiSCUIT Workshop, ECCV 2026</li>
+      <li><span class="news-date">[6 Jan 2026]</span> Presented "Learning-Based Optimization of EV Routing with V2G Integration and On-the-Go Energy Harvesting" at COMSNETS 2026</li>
+      <li><span class="news-date">[19 Sep 2025]</span> Gave a tutorial talk on Reinforcement Learning at the Robert Bosch Centre for Cyber Physical Systems, IISc, Bangalore</li>
+    </ul>
   </section>
 
   <section id="projects" class="section">
@@ -202,73 +224,15 @@
     </div>
   </section>
 
-  <section id="cv" class="section">
-    <h2>Education, Honors &amp; Skills</h2>
-
-    <div class="cv-grid">
-      <div>
-        <h3>Education</h3>
-        <article class="entry">
-          <div class="entry-header">
-            <h4>B.E., Computer Science and Engineering</h4>
-            <span class="entry-date">Sep 2023 – Present</span>
-          </div>
-          <p class="entry-org">Ramaiah Institute of Technology · CGPA 9.91/10</p>
-        </article>
-        <article class="entry">
-          <div class="entry-header">
-            <h4>B.Sc., Programming and Data Science</h4>
-            <span class="entry-date">Sep 2023 – Present</span>
-          </div>
-          <p class="entry-org">Indian Institute of Technology Madras · CGPA 8.8/10</p>
-        </article>
-
-        <h3>Honors &amp; Awards</h3>
-        <ul class="plain-list">
-          <li><strong>LRN Foundation Grant</strong> — Travel grant to attend ECCV 2026 <span class="entry-date">2026</span></li>
-          <li><strong>Best Blog Award</strong> — Society for Data Science Blogathon on Responsible AI <span class="entry-date">2024</span></li>
-          <li><strong>Smart India Hackathon</strong> — Winner, Tourism Category (national-level) <span class="entry-date">2022</span></li>
-          <li><strong>Karnataka Science and Technology Award</strong> — Finalist, among 100 statewide participants <span class="entry-date">2022</span></li>
-          <li><strong>Microsoft Learn Student Ambassador</strong> — selected to organise technical events and mentorship programmes</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Technical Skills</h3>
-        <div class="skill-group">
-          <h4>Frameworks &amp; Libraries</h4>
-          <div class="tags">
-            <span>PyTorch</span><span>TensorFlow</span><span>LangChain</span><span>LangGraph</span><span>HuggingFace Transformers</span><span>FastAPI</span><span>Flask</span><span>NumPy</span><span>Scikit-learn</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Languages</h4>
-          <div class="tags">
-            <span>Python</span><span>Java</span><span>C</span><span>SQL</span><span>JavaScript</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Tools &amp; Infrastructure</h4>
-          <div class="tags">
-            <span>Docker</span><span>Git</span><span>Redis</span><span>Celery</span><span>FAISS</span><span>Chroma</span><span>Linux</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Databases</h4>
-          <div class="tags">
-            <span>MySQL</span><span>SQLite</span><span>MongoDB</span>
-          </div>
-        </div>
-
-        <h3>Certifications</h3>
-        <ul class="plain-list">
-          <li>Goethe-Zertifikat B1 (German, Goethe-Institut)</li>
-          <li>Google IT Automation with Python (Google)</li>
-          <li>Python for Everybody Specialization (U. Michigan)</li>
-          <li>C Programming with Linux (Dartmouth/IMT)</li>
-        </ul>
-      </div>
-    </div>
+  <section id="honors" class="section">
+    <h2>Honors and Awards</h2>
+    <ul class="awards-list">
+      <li><strong>LRN Foundation Grant</strong> — Travel grant to attend ECCV 2026 <span class="award-date">[2026]</span></li>
+      <li><strong>Best Blog Award</strong> — Society for Data Science Blogathon on Responsible AI <span class="award-date">[2024]</span></li>
+      <li><strong>Smart India Hackathon</strong> — Winner, Tourism Category (national-level competition) <span class="award-date">[2022]</span></li>
+      <li><strong>Karnataka Science and Technology Award</strong> — Finalist, among 100 statewide participants <span class="award-date">[2022]</span></li>
+      <li><strong>Microsoft Learn Student Ambassador</strong> — Selected to organise technical events and mentorship programmes on Microsoft platforms</li>
+    </ul>
   </section>
 
   <section id="contact" class="section contact-section">
@@ -276,9 +240,10 @@
     <p>Bangalore, India</p>
     <div class="social-links">
       <a href="mailto:risshabsrinivas@gmail.com">risshabsrinivas@gmail.com</a>
-      <a href="#">Google Scholar</a>
+      <a href="https://scholar.google.com/citations?user=nJExFNUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <!-- TODO: replace # with real GitHub URL -->
       <a href="#">GitHub</a>
-      <a href="#">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/risshab-srinivas-ramesh-7b614a290" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </section>
 
