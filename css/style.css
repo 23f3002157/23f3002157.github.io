@@ -159,10 +159,15 @@ main {
 }
 
 .tagline {
+  max-width: 520px;
   font-size: 0.98rem;
   color: var(--accent);
   font-weight: 500;
   margin-bottom: 1rem;
+}
+
+.bio {
+  max-width: 520px;
 }
 
 .social-links {
